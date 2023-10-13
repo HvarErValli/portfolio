@@ -1,21 +1,28 @@
 import './globals.css'
 import Link from 'next/link'
-import styles from './page.module.css'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Valli Portfolio',
+  description: 'My portfolio website',
+}
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="font-mono">
       <head />
       <body>
-      <div className={styles.topnav}>
-          <div className={styles.topnavcentered}>
-            <Link href="/" className={styles.nav}>Home</Link>
-            <Link href="/about" className={styles.nav}>About</Link>      
+        <div className='bg-gray-700'>
+          <div className='grid grid-cols-4 justify-items-center'>
+              <Link href="/" className='p-2 bg-gray-700  hover:bg-gray-800' >Home</Link>
+              <Link href="/projects" className='p-2 bg-gray-700  hover:bg-gray-800'>Projects</Link> 
+              <Link href="/about" className='p-2 bg-gray-700  hover:bg-gray-800'>About me</Link>  
+              <Link href="/contact" className='p-2 bg-gray-700  hover:bg-gray-800'>Contact</Link>    
           </div>
-      </div> 
+        </div>
       {children}
       </body>
     </html>

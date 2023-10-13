@@ -1,12 +1,10 @@
-import styles from '../page.module.css'
-
 export default function About() {
   return (
-    <main className={styles.main}>
-    <header className={styles.description}>
+    <main>
+    <header>
       About me 
     </header>
-    <h2 className={styles.description}>
+    <h2>
       My name is Valli.
     </h2>
 
